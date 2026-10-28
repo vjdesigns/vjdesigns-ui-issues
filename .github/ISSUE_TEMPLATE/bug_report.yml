@@ -1,0 +1,106 @@
+name: Bug report
+description: Something in vjdesigns-ui isn't working as documented.
+title: "[Bug]: "
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Before you file:
+        - Search [existing issues](https://github.com/vjdesigns/vjdesigns-ui-issues/issues?q=is%3Aissue) to avoid duplicates.
+        - **Security issues must not be posted here.** See [SECURITY.md](https://github.com/vjdesigns/vjdesigns-ui-issues/blob/main/SECURITY.md).
+        - **Pro customers:** use your private support channel for guaranteed response times.
+
+        Reports without a working reproduction may be closed.
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      description: Which component is affected?
+      placeholder: e.g. Button, Dialog, DataTable
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Library version
+      description: Run `npm ls @vjdesigns/vjdesigns-ui` to find it.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      options:
+        - React
+        - Angular
+        - Vue
+    validations:
+      required: true
+  - type: input
+    id: framework-version
+    attributes:
+      label: Framework version
+      placeholder: e.g. React 19.1, Angular 20, Vue 3.5
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS
+      placeholder: e.g. Chrome 130 on macOS 15
+    validations:
+      required: true
+  - type: input
+    id: reproduction
+    attributes:
+      label: StackBlitz reproduction
+      description: Use "Open in StackBlitz" on any docs example, reproduce the bug, and paste the link.
+      placeholder: https://stackblitz.com/edit/...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the reproduction
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include console errors or screenshots if helpful.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area (optional)
+      multiple: true
+      options:
+        - Accessibility
+        - Theming
+        - Translation / i18n
+        - Layout / styling
+        - TypeScript types
+        - Documentation
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this hasn't been reported.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
