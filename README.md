@@ -17,7 +17,7 @@ Never post security vulnerabilities publicly. See [SECURITY.md](SECURITY.md).
 ## Response times
 
 - **Free users:** issues are triaged on a best-effort basis. There is no guaranteed response time.
-- **vjdesigns-ui Pro customers:** use your private Pro support channel for priority support.
+- **vjdesigns-ui Pro customers:** you can file here, or email [vjdesign005@gmail.com](mailto:vjdesign005@gmail.com) with the email you bought Pro with.
 
 ## Labels
 

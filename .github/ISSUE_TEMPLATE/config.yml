@@ -1,1 +1,8 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://vjdesigns-ui.org/docs
+    about: Guides, live examples and the full API reference for every component.
+  - name: Report a security vulnerability
+    url: https://github.com/vjdesigns/vjdesigns-ui-issues/security/advisories/new
+    about: Report security problems privately, never in a public issue.

@@ -9,7 +9,7 @@ body:
         Thanks for taking the time to report a bug. Before you file:
         - Search [existing issues](https://github.com/vjdesigns/vjdesigns-ui-issues/issues?q=is%3Aissue) to avoid duplicates.
         - **Security issues must not be posted here.** See [SECURITY.md](https://github.com/vjdesigns/vjdesigns-ui-issues/blob/main/SECURITY.md).
-        - **Pro customers:** use your private support channel for guaranteed response times.
+        - **Pro customers:** you can also email [vjdesign005@gmail.com](mailto:vjdesign005@gmail.com) with the email you bought Pro with.
 
         Reports without a working reproduction may be closed.
   - type: input
@@ -17,15 +17,24 @@ body:
     attributes:
       label: Component
       description: Which component is affected?
-      placeholder: e.g. Button, Dialog, DataTable
+      placeholder: e.g. Button, Modal, DataGrid
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - "@vjdesigns/vjdesigns-ui (free)"
+        - "@vjdesigns/vjdesigns-ui-pro"
     validations:
       required: true
   - type: input
     id: version
     attributes:
       label: Library version
-      description: Run `npm ls @vjdesigns/vjdesigns-ui` to find it.
-      placeholder: e.g. 1.0.0
+      description: Run `npm ls @vjdesigns/vjdesigns-ui` to find it. For a Pro bug, include the Pro version too.
+      placeholder: e.g. 2.4.0
     validations:
       required: true
   - type: dropdown
@@ -55,8 +64,8 @@ body:
   - type: input
     id: reproduction
     attributes:
-      label: StackBlitz reproduction
-      description: Use "Open in StackBlitz" on any docs example, reproduce the bug, and paste the link.
+      label: Reproduction link
+      description: Use "Open in StackBlitz" on any docs example, reproduce the bug, and paste the link. For Angular or Vue, a public StackBlitz project or repo is fine.
       placeholder: https://stackblitz.com/edit/...
     validations:
       required: true
@@ -92,6 +101,7 @@ body:
         - Accessibility
         - Theming
         - Translation / i18n
+        - Right-to-left
         - Layout / styling
         - TypeScript types
         - Documentation
